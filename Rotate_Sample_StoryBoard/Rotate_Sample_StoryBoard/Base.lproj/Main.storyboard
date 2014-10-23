@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ms2-lp-ZUF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ma6-Ef-zaY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfS-cE-JHq">
+                                <rect key="frame" x="27" y="25" width="69" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Modal">
+                                    <color key="titleColor" red="0.98569676829999997" green="0.97120932920000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eMG-C8-OSz" kind="presentation" id="izR-ml-wpu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ma6-Ef-zaY" secondAttribute="trailing" id="2aw-GU-rnS"/>
+                            <constraint firstItem="ma6-Ef-zaY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CkC-QE-MSe"/>
+                            <constraint firstItem="ma6-Ef-zaY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YE6-Tw-qrP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ma6-Ef-zaY" secondAttribute="bottom" id="hWq-uj-v3c"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="EZn-CR-OWp"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="448"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="buc-EB-EK4">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="eMG-C8-OSz" customClass="ModalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fu4-Sr-MJS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pxa-pF-Jwd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aRW-ma-pgS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Y9b-ee-Rxd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mld-tV-wmW">
+                                <rect key="frame" x="21" y="28" width="80" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fOE-hO-FHF" kind="unwind" unwindAction="ViewControllerReturnActionForSegue:" id="KJA-i0-OC8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y9b-ee-Rxd" firstAttribute="top" secondItem="Fu4-Sr-MJS" secondAttribute="bottom" id="E1W-ic-zsx"/>
+                            <constraint firstItem="Pxa-pF-Jwd" firstAttribute="top" secondItem="Y9b-ee-Rxd" secondAttribute="bottom" id="ZgI-Sz-fyo"/>
+                            <constraint firstItem="Y9b-ee-Rxd" firstAttribute="leading" secondItem="aRW-ma-pgS" secondAttribute="leading" id="ktG-GB-6I0"/>
+                            <constraint firstAttribute="trailing" secondItem="Y9b-ee-Rxd" secondAttribute="trailing" id="w2Y-g1-tL3"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48i-kC-BQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fOE-hO-FHF" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="448"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FWV-QB-PWS">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="ms2-lp-ZUF" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r5h-fU-Qmq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="9yF-0v-1VC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gWn-F8-238"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJB-xN-rZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-254" y="448"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image1.jpg" width="1024" height="1024"/>
+        <image name="image2.jpg" width="2048" height="2048"/>
+    </resources>
+</document>
